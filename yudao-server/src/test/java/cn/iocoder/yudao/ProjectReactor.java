@@ -102,10 +102,16 @@ public class ProjectReactor {
                         && !file.getPath().contains(separator + "dist" + separator)
                         && !file.getPath().contains(".iml")
                         && !file.getPath().contains(".md")
+                        && !file.getPath().contains(".gitee")
+                        && !file.getPath().contains(".github")
+                        && !file.getPath().contains(".fastRequest")
+                        && !file.getPath().contains(".image")
+                        && !file.getPath().contains("LICENSE")
                         && !file.getPath().contains("yudao-module-mall")
                         && !file.getPath().contains("yudao-module-member")
                         && !file.getPath().contains("yudao-module-mp")
                         && !file.getPath().contains("yudao-module-pay")
+                        && !file.getPath().contains("yudao-ui")
                         && !file.getPath().contains(".html.gz"))
                 .collect(Collectors.toList());
         return files;
