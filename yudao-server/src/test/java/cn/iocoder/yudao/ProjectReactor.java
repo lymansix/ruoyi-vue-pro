@@ -45,12 +45,12 @@ public class ProjectReactor {
         log.info("[main][原项目路劲改地址 ({})]", projectBaseDir);
 
         // ========== 配置，需要你手动修改 ==========
-        String groupIdNew = "cn.wuliang.boot";
-        String artifactIdNew = "wuliang";
-        String packageNameNew = "cn.start.infinity";
-        String titleNew = "无量管理系统";
-        String commentNew = "无量";
-        String authorNew = "无量";
+        String groupIdNew = "cn.st.boot";
+        String artifactIdNew = "st";
+        String packageNameNew = "cn.start.st";
+        String titleNew = "数瞳管理系统";
+        String commentNew = "数瞳";
+        String authorNew = "数瞳";
         String projectBaseDirNew = projectBaseDir + "-new"; // 一键改名后，“新”项目所在的目录
         log.info("[main][检测新项目目录 ({})是否存在]", projectBaseDirNew);
         if (FileUtil.exist(projectBaseDirNew)) {
@@ -102,6 +102,10 @@ public class ProjectReactor {
                         && !file.getPath().contains(separator + "dist" + separator)
                         && !file.getPath().contains(".iml")
                         && !file.getPath().contains(".md")
+                        && !file.getPath().contains("yudao-module-mall")
+                        && !file.getPath().contains("yudao-module-member")
+                        && !file.getPath().contains("yudao-module-mp")
+                        && !file.getPath().contains("yudao-module-pay")
                         && !file.getPath().contains(".html.gz"))
                 .collect(Collectors.toList());
         return files;
