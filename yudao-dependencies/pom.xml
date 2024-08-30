@@ -73,6 +73,7 @@
         <jimureport.version>1.7.8</jimureport.version>
         <xercesImpl.version>2.12.2</xercesImpl.version>
         <weixin-java.version>4.6.0</weixin-java.version>
+        <kotlin.version>1.8.10</kotlin.version>
     </properties>
 
     <dependencyManagement>
@@ -599,6 +600,18 @@
                 <groupId>xerces</groupId>
                 <artifactId>xercesImpl</artifactId>
                 <version>${xercesImpl.version}</version>
+            </dependency>
+
+            <!-- kotlin -->
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-reflect</artifactId>
+                <version>${kotlin.version}</version>
             </dependency>
 
         </dependencies>
